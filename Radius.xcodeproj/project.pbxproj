@@ -17,6 +17,7 @@
 		A11483FA28929380000203D0 /* RadiusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11483F928929380000203D0 /* RadiusUITestsLaunchTests.swift */; };
 		A13FDBA82892D51600349309 /* FacilitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBA72892D51600349309 /* FacilitiesController.swift */; };
 		A13FDBAB2892D7FB00349309 /* FacilitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */; };
+		A13FDBAE2892DEA000349309 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBAD2892DEA000349309 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A11483F928929380000203D0 /* RadiusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A13FDBA72892D51600349309 /* FacilitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesController.swift; sourceTree = "<group>"; };
 		A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesCell.swift; sourceTree = "<group>"; };
+		A13FDBAD2892DEA000349309 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		A11483D52892937F000203D0 /* Radius */ = {
 			isa = PBXGroup;
 			children = (
+				A13FDBAC2892DE8B00349309 /* Helpers */,
 				A13FDBA92892D7DE00349309 /* Cells */,
 				A13FDBA62892D49900349309 /* Controllers */,
 				A11483D62892937F000203D0 /* AppDelegate.swift */,
@@ -144,6 +147,14 @@
 				A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A13FDBAC2892DE8B00349309 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A13FDBAD2892DEA000349309 /* NetworkManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,7 @@
 			files = (
 				A13FDBAB2892D7FB00349309 /* FacilitiesCell.swift in Sources */,
 				A11483D72892937F000203D0 /* AppDelegate.swift in Sources */,
+				A13FDBAE2892DEA000349309 /* NetworkManager.swift in Sources */,
 				A13FDBA82892D51600349309 /* FacilitiesController.swift in Sources */,
 				A11483D92892937F000203D0 /* SceneDelegate.swift in Sources */,
 			);

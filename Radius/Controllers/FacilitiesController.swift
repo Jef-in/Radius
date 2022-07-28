@@ -20,7 +20,7 @@ class FacilitiesController: UIViewController {
         facilitiesTable.sectionHeaderTopPadding = 0
     }
 }
-
+// MARK: Tableview delgate and datasource methods
 extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
