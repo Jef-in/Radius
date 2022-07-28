@@ -32,7 +32,7 @@ extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FacilitiesCell", for: indexPath) as? FacilitiesCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RadiusConstants.facilitiesCellIdentifier, for: indexPath) as? FacilitiesCell else { return UITableViewCell() }
         
         return cell
     }
@@ -48,7 +48,7 @@ extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
         label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
         label.text = "Facility Type"
         label.font = .systemFont(ofSize: 18)
-        label.textColor = UIColor(displayP3Red: 67.0, green: 95.0, blue: 220.0, alpha: 1.0)
+        label.textColor = RadiusConstants.facilityTypeColor
         
         headerView.addSubview(label)
         headerView.backgroundColor = .systemBlue

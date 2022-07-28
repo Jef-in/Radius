@@ -18,6 +18,9 @@
 		A13FDBA82892D51600349309 /* FacilitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBA72892D51600349309 /* FacilitiesController.swift */; };
 		A13FDBAB2892D7FB00349309 /* FacilitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */; };
 		A13FDBAE2892DEA000349309 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBAD2892DEA000349309 /* NetworkManager.swift */; };
+		A13FDBB12892E0B600349309 /* FacilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBB02892E0B600349309 /* FacilityModel.swift */; };
+		A13FDBB42892E1B800349309 /* FacilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBB32892E1B800349309 /* FacilityService.swift */; };
+		A13FDBB62892E28D00349309 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBB52892E28D00349309 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		A13FDBA72892D51600349309 /* FacilitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesController.swift; sourceTree = "<group>"; };
 		A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesCell.swift; sourceTree = "<group>"; };
 		A13FDBAD2892DEA000349309 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A13FDBB02892E0B600349309 /* FacilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityModel.swift; sourceTree = "<group>"; };
+		A13FDBB32892E1B800349309 /* FacilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityService.swift; sourceTree = "<group>"; };
+		A13FDBB52892E28D00349309 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 		A11483D52892937F000203D0 /* Radius */ = {
 			isa = PBXGroup;
 			children = (
+				A13FDBB22892E1A400349309 /* Services */,
+				A13FDBAF2892E0A200349309 /* Models */,
 				A13FDBAC2892DE8B00349309 /* Helpers */,
 				A13FDBA92892D7DE00349309 /* Cells */,
 				A13FDBA62892D49900349309 /* Controllers */,
@@ -153,8 +161,25 @@
 			isa = PBXGroup;
 			children = (
 				A13FDBAD2892DEA000349309 /* NetworkManager.swift */,
+				A13FDBB52892E28D00349309 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A13FDBAF2892E0A200349309 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A13FDBB02892E0B600349309 /* FacilityModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A13FDBB22892E1A400349309 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A13FDBB32892E1B800349309 /* FacilityService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,11 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13FDBB42892E1B800349309 /* FacilityService.swift in Sources */,
+				A13FDBB12892E0B600349309 /* FacilityModel.swift in Sources */,
 				A13FDBAB2892D7FB00349309 /* FacilitiesCell.swift in Sources */,
 				A11483D72892937F000203D0 /* AppDelegate.swift in Sources */,
 				A13FDBAE2892DEA000349309 /* NetworkManager.swift in Sources */,
 				A13FDBA82892D51600349309 /* FacilitiesController.swift in Sources */,
 				A11483D92892937F000203D0 /* SceneDelegate.swift in Sources */,
+				A13FDBB62892E28D00349309 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
