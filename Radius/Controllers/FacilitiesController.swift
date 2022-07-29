@@ -53,12 +53,13 @@ class FacilitiesController: UIViewController {
     func getFacilities() {
         viewModel.getFacilities().sink(receiveCompletion: {(completion) in
             
-        }, receiveValue: { facilityModel in
-            self.facilities = facilityModel.facilities
-            self.exclusion = facilityModel.exclusions
+        }, receiveValue: { [weak self] facilityModel in
+            guard let model = facilityModel else { return }
+            self?.facilities = model.facilities
+            self?.exclusion = model.exclusions
             
             DispatchQueue.main.async {
-                self.facilitiesTable.reloadData()
+                self?.facilitiesTable.reloadData()
             }
         }).store(in: &subscriptions)
     }
@@ -76,7 +77,9 @@ extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RadiusConstants.facilitiesCellIdentifier, for: indexPath) as? FacilitiesCell else { return UITableViewCell() }
-        cell.facilityNameLabel.text = facilities?[indexPath.section].options?[indexPath.row].name
+        let facilityOption = facilities?[indexPath.section].options?[indexPath.row]
+        cell.facilityNameLabel.text = facilityOption?.name
+        cell.facilityImageView.image = UIImage(named: facilityOption?.icon ?? "")
         return cell
     }
     
@@ -100,5 +103,14 @@ extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell: UITableViewCell = self.facilitiesTable.cellForRow(at: indexPath) else { return }
+        if cell.accessoryType == .checkmark {
+            cell.accessoryType = .none
+        } else {
+            cell.accessoryType = .checkmark
+        }
     }
 }

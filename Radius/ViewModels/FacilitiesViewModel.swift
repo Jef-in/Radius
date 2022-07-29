@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 protocol FacilitiesViewable {
-    func getFacilities() -> AnyPublisher<FacilityModel, Error>
+    func getFacilities() -> AnyPublisher<FacilityModel?, Error>
 }
 
 class FacilitiesViewModel: FacilitiesViewable {
@@ -20,7 +20,7 @@ class FacilitiesViewModel: FacilitiesViewable {
         self.facilitiesService = facilitiesService
     }
     
-    func getFacilities() -> AnyPublisher<FacilityModel, Error> {
+    func getFacilities() -> AnyPublisher<FacilityModel?, Error> {
         facilitiesService.getFacilities()
             .eraseToAnyPublisher()
     }
