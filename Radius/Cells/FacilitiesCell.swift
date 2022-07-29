@@ -9,6 +9,9 @@ import UIKit
 
 class FacilitiesCell: UITableViewCell {
 
+    @IBOutlet weak var facilityNameLabel: UILabel!
+    @IBOutlet weak var facilityImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

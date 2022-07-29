@@ -9,8 +9,7 @@ import Combine
 import Foundation
 
 protocol FacilitiesViewable {
-    func getFacilities() -> AnyPublisher<[Facilities]?, Error>
-    func getExclusion() -> AnyPublisher<[[Exclusions]]?, Error>
+    func getFacilities() -> AnyPublisher<FacilityModel, Error>
 }
 
 class FacilitiesViewModel: FacilitiesViewable {
@@ -21,15 +20,8 @@ class FacilitiesViewModel: FacilitiesViewable {
         self.facilitiesService = facilitiesService
     }
     
-    func getFacilities() -> AnyPublisher<[Facilities]?, Error> {
+    func getFacilities() -> AnyPublisher<FacilityModel, Error> {
         facilitiesService.getFacilities()
-            .map(\.facilities)
-            .eraseToAnyPublisher()
-    }
-    
-    func getExclusion() -> AnyPublisher<[[Exclusions]]?, Error> {
-        facilitiesService.getFacilities()
-            .map(\.exclusions)
             .eraseToAnyPublisher()
     }
 }

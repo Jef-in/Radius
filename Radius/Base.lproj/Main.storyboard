@@ -57,6 +57,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="facilityImageView" destination="OGw-R5-9GA" id="oJt-lI-SqL"/>
+                                            <outlet property="facilityNameLabel" destination="aN7-lz-x7X" id="0NU-hf-YPk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
