@@ -16,7 +16,8 @@ class FacilitiesController: UIViewController {
     var subscriptions = Set<AnyCancellable>()
     var facilities: [Facilities]?
     var exclusion: [[Exclusions]]?
-    
+    var excludedOptions = [Exclusions]()
+    var selectedIndex: IndexPath?
     init(viewModel: FacilitiesViewModel,
          networkManager: NetworkManager) {
         self.viewModel = viewModel
@@ -63,6 +64,7 @@ class FacilitiesController: UIViewController {
             }
         }).store(in: &subscriptions)
     }
+    
 }
 // MARK: Tableview delgate and datasource methods
 extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
@@ -77,9 +79,17 @@ extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RadiusConstants.facilitiesCellIdentifier, for: indexPath) as? FacilitiesCell else { return UITableViewCell() }
-        let facilityOption = facilities?[indexPath.section].options?[indexPath.row]
-        cell.facilityNameLabel.text = facilityOption?.name
-        cell.facilityImageView.image = UIImage(named: facilityOption?.icon ?? "")
+        cell.accessoryType = .none
+        if selectedIndex != nil {
+            if indexPath == selectedIndex {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
+        }
+        if let facility = facilities?[indexPath.section], let option = facility.options?[indexPath.row] {
+            cell.configureCell(facility: facility, option: option, exclusions: excludedOptions)
+        }
         return cell
     }
     
@@ -106,11 +116,13 @@ extension FacilitiesController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell: UITableViewCell = self.facilitiesTable.cellForRow(at: indexPath) else { return }
-        if cell.accessoryType == .checkmark {
-            cell.accessoryType = .none
-        } else {
-            cell.accessoryType = .checkmark
+        
+        guard let facility = facilities else { return }
+        guard let exclusions = exclusion else { return }
+        selectedIndex = indexPath
+        excludedOptions = viewModel.checkForExclusions(for: facility[indexPath.section].facility_id ?? "", optionId: facility[indexPath.section].options?[indexPath.row].id ?? "", exclusions: exclusions)
+        DispatchQueue.main.async {
+            self.facilitiesTable.reloadData()
         }
     }
 }
