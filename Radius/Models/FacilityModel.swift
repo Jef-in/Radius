@@ -8,23 +8,23 @@
 import Foundation
 
 public class FacilityModel: Codable {
-    let facilities : [Facilities]?
-    let exclusions : [[Exclusions]]?
+    var facilities : [Facilities]?
+    var exclusions : [[Exclusions]]?
 }
 
 public class Facilities : Codable {
-    let facility_id : String?
-    let name : String?
-    let options : [Options]?
+    var facility_id : String?
+    var name : String?
+    var options : [Options]?
 }
 
 public class Options : Codable {
-    let name : String?
-    let icon : String?
-    let id : String?
+    var name : String?
+    var icon : String?
+    var id : String?
 }
 
 public class Exclusions : Codable {
-    let facility_id : String?
-    let options_id : String?
+    var facility_id : String?
+    var options_id : String?
 }

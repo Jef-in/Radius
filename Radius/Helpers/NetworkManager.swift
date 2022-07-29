@@ -7,12 +7,19 @@
 
 import Network
 
-final class NetworkManager {
+protocol NetworkManageable {
+    func startMonitoring()
+    func stopMonitoring()
+    var isConnected: Bool { get
+    }
+}
+
+final class NetworkManager: NetworkManageable {
     
     static let shared = NetworkManager()
     private let queue = DispatchQueue.global()
     private let monitor: NWPathMonitor
-    public private(set) var isConnected: Bool = false
+    public internal(set) var isConnected: Bool = false
     
     private init() {
         monitor = NWPathMonitor()

@@ -10,16 +10,15 @@ import UIKit
 
 class FacilitiesController: UIViewController {
     @IBOutlet weak var facilitiesTable: UITableView!
-    
-    private let viewModel: FacilitiesViewModel
-    private let networkManger: NetworkManager
+    private let viewModel: FacilitiesViewable
+    private let networkManger: NetworkManageable
     var subscriptions = Set<AnyCancellable>()
     var facilities: [Facilities]?
     var exclusion: [[Exclusions]]?
     var excludedOptions = [Exclusions]()
     var selectedIndex: IndexPath?
-    init(viewModel: FacilitiesViewModel,
-         networkManager: NetworkManager) {
+    init(viewModel: FacilitiesViewable,
+         networkManager: NetworkManageable) {
         self.viewModel = viewModel
         self.networkManger = networkManager
         super.init()
@@ -47,7 +46,7 @@ class FacilitiesController: UIViewController {
         if networkManger.isConnected {
             getFacilities()
         } else {
-            
+            showAlert()
         }
     }
     

@@ -15,9 +15,9 @@ protocol FacilitiesViewable {
 
 class FacilitiesViewModel: FacilitiesViewable {
     
-    private let facilitiesService: FacilitiesService
+    private let facilitiesService: FacilitiesServiceable
     
-    init(facilitiesService: FacilitiesService) {
+    init(facilitiesService: FacilitiesServiceable) {
         self.facilitiesService = facilitiesService
     }
     

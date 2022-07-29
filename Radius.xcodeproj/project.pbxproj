@@ -12,9 +12,6 @@
 		A11483DE2892937F000203D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11483DC2892937F000203D0 /* Main.storyboard */; };
 		A11483E028929380000203D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11483DF28929380000203D0 /* Assets.xcassets */; };
 		A11483E328929380000203D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11483E128929380000203D0 /* LaunchScreen.storyboard */; };
-		A11483EE28929380000203D0 /* RadiusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11483ED28929380000203D0 /* RadiusTests.swift */; };
-		A11483F828929380000203D0 /* RadiusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11483F728929380000203D0 /* RadiusUITests.swift */; };
-		A11483FA28929380000203D0 /* RadiusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11483F928929380000203D0 /* RadiusUITestsLaunchTests.swift */; };
 		A13FDBA82892D51600349309 /* FacilitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBA72892D51600349309 /* FacilitiesController.swift */; };
 		A13FDBAB2892D7FB00349309 /* FacilitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */; };
 		A13FDBAE2892DEA000349309 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBAD2892DEA000349309 /* NetworkManager.swift */; };
@@ -22,17 +19,15 @@
 		A13FDBB42892E1B800349309 /* FacilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBB32892E1B800349309 /* FacilityService.swift */; };
 		A13FDBB62892E28D00349309 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13FDBB52892E28D00349309 /* Constants.swift */; };
 		A15B6C2328938C2E00F34AF6 /* FacilitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C2228938C2E00F34AF6 /* FacilitiesViewModel.swift */; };
+		A15B6C272893B5C700F34AF6 /* FacilitiesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C262893B5C700F34AF6 /* FacilitiesViewModelTests.swift */; };
+		A15B6C2A2893B68900F34AF6 /* MockFacilitiesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C292893B68900F34AF6 /* MockFacilitiesService.swift */; };
+		A15B6C2E2893C4C800F34AF6 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C2D2893C4C800F34AF6 /* MockNetworkManager.swift */; };
+		A15B6C302893C63D00F34AF6 /* MockFacilitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C2F2893C63D00F34AF6 /* MockFacilitiesViewModel.swift */; };
+		A15B6C322893CD5C00F34AF6 /* UIAlert+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B6C312893CD5C00F34AF6 /* UIAlert+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A11483EA28929380000203D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A11483CB2892937F000203D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A11483D22892937F000203D0;
-			remoteInfo = Radius;
-		};
-		A11483F428929380000203D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A11483CB2892937F000203D0 /* Project object */;
 			proxyType = 1;
@@ -50,10 +45,6 @@
 		A11483E228929380000203D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A11483E428929380000203D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11483E928929380000203D0 /* RadiusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadiusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A11483ED28929380000203D0 /* RadiusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusTests.swift; sourceTree = "<group>"; };
-		A11483F328929380000203D0 /* RadiusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadiusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A11483F728929380000203D0 /* RadiusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusUITests.swift; sourceTree = "<group>"; };
-		A11483F928929380000203D0 /* RadiusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A13FDBA72892D51600349309 /* FacilitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesController.swift; sourceTree = "<group>"; };
 		A13FDBAA2892D7FB00349309 /* FacilitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesCell.swift; sourceTree = "<group>"; };
 		A13FDBAD2892DEA000349309 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -61,6 +52,11 @@
 		A13FDBB32892E1B800349309 /* FacilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityService.swift; sourceTree = "<group>"; };
 		A13FDBB52892E28D00349309 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A15B6C2228938C2E00F34AF6 /* FacilitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewModel.swift; sourceTree = "<group>"; };
+		A15B6C262893B5C700F34AF6 /* FacilitiesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilitiesViewModelTests.swift; sourceTree = "<group>"; };
+		A15B6C292893B68900F34AF6 /* MockFacilitiesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFacilitiesService.swift; sourceTree = "<group>"; };
+		A15B6C2D2893C4C800F34AF6 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		A15B6C2F2893C63D00F34AF6 /* MockFacilitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFacilitiesViewModel.swift; sourceTree = "<group>"; };
+		A15B6C312893CD5C00F34AF6 /* UIAlert+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlert+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A11483F028929380000203D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,7 +82,6 @@
 			children = (
 				A11483D52892937F000203D0 /* Radius */,
 				A11483EC28929380000203D0 /* RadiusTests */,
-				A11483F628929380000203D0 /* RadiusUITests */,
 				A11483D42892937F000203D0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +91,6 @@
 			children = (
 				A11483D32892937F000203D0 /* Radius.app */,
 				A11483E928929380000203D0 /* RadiusTests.xctest */,
-				A11483F328929380000203D0 /* RadiusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +98,7 @@
 		A11483D52892937F000203D0 /* Radius */ = {
 			isa = PBXGroup;
 			children = (
+				A15B6C282893B67900F34AF6 /* Mocks */,
 				A15B6C2128938B7F00F34AF6 /* ViewModels */,
 				A13FDBB22892E1A400349309 /* Services */,
 				A13FDBAF2892E0A200349309 /* Models */,
@@ -130,18 +118,9 @@
 		A11483EC28929380000203D0 /* RadiusTests */ = {
 			isa = PBXGroup;
 			children = (
-				A11483ED28929380000203D0 /* RadiusTests.swift */,
+				A15B6C262893B5C700F34AF6 /* FacilitiesViewModelTests.swift */,
 			);
 			path = RadiusTests;
-			sourceTree = "<group>";
-		};
-		A11483F628929380000203D0 /* RadiusUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A11483F728929380000203D0 /* RadiusUITests.swift */,
-				A11483F928929380000203D0 /* RadiusUITestsLaunchTests.swift */,
-			);
-			path = RadiusUITests;
 			sourceTree = "<group>";
 		};
 		A13FDBA62892D49900349309 /* Controllers */ = {
@@ -165,6 +144,7 @@
 			children = (
 				A13FDBAD2892DEA000349309 /* NetworkManager.swift */,
 				A13FDBB52892E28D00349309 /* Constants.swift */,
+				A15B6C312893CD5C00F34AF6 /* UIAlert+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,6 +171,16 @@
 				A15B6C2228938C2E00F34AF6 /* FacilitiesViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A15B6C282893B67900F34AF6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A15B6C292893B68900F34AF6 /* MockFacilitiesService.swift */,
+				A15B6C2D2893C4C800F34AF6 /* MockNetworkManager.swift */,
+				A15B6C2F2893C63D00F34AF6 /* MockFacilitiesViewModel.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,24 +221,6 @@
 			productReference = A11483E928929380000203D0 /* RadiusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A11483F228929380000203D0 /* RadiusUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A114840328929380000203D0 /* Build configuration list for PBXNativeTarget "RadiusUITests" */;
-			buildPhases = (
-				A11483EF28929380000203D0 /* Sources */,
-				A11483F028929380000203D0 /* Frameworks */,
-				A11483F128929380000203D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A11483F528929380000203D0 /* PBXTargetDependency */,
-			);
-			name = RadiusUITests;
-			productName = RadiusUITests;
-			productReference = A11483F328929380000203D0 /* RadiusUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,10 +236,7 @@
 					};
 					A11483E828929380000203D0 = {
 						CreatedOnToolsVersion = 13.2;
-						TestTargetID = A11483D22892937F000203D0;
-					};
-					A11483F228929380000203D0 = {
-						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
 						TestTargetID = A11483D22892937F000203D0;
 					};
 				};
@@ -287,7 +256,6 @@
 			targets = (
 				A11483D22892937F000203D0 /* Radius */,
 				A11483E828929380000203D0 /* RadiusTests */,
-				A11483F228929380000203D0 /* RadiusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,13 +278,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A11483F128929380000203D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,11 +289,15 @@
 				A13FDBB12892E0B600349309 /* FacilityModel.swift in Sources */,
 				A13FDBAB2892D7FB00349309 /* FacilitiesCell.swift in Sources */,
 				A11483D72892937F000203D0 /* AppDelegate.swift in Sources */,
+				A15B6C2E2893C4C800F34AF6 /* MockNetworkManager.swift in Sources */,
 				A13FDBAE2892DEA000349309 /* NetworkManager.swift in Sources */,
 				A15B6C2328938C2E00F34AF6 /* FacilitiesViewModel.swift in Sources */,
+				A15B6C302893C63D00F34AF6 /* MockFacilitiesViewModel.swift in Sources */,
+				A15B6C2A2893B68900F34AF6 /* MockFacilitiesService.swift in Sources */,
 				A13FDBA82892D51600349309 /* FacilitiesController.swift in Sources */,
 				A11483D92892937F000203D0 /* SceneDelegate.swift in Sources */,
 				A13FDBB62892E28D00349309 /* Constants.swift in Sources */,
+				A15B6C322893CD5C00F34AF6 /* UIAlert+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,16 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A11483EE28929380000203D0 /* RadiusTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A11483EF28929380000203D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A11483FA28929380000203D0 /* RadiusUITestsLaunchTests.swift in Sources */,
-				A11483F828929380000203D0 /* RadiusUITests.swift in Sources */,
+				A15B6C272893B5C700F34AF6 /* FacilitiesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +316,6 @@
 			isa = PBXTargetDependency;
 			target = A11483D22892937F000203D0 /* Radius */;
 			targetProxy = A11483EA28929380000203D0 /* PBXContainerItemProxy */;
-		};
-		A11483F528929380000203D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A11483D22892937F000203D0 /* Radius */;
-			targetProxy = A11483F428929380000203D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -565,15 +516,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E6WV5AAPA8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.RadiusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radius.app/Radius";
@@ -585,11 +543,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = E6WV5AAPA8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sample.RadiusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,42 +561,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radius.app/Radius";
-			};
-			name = Release;
-		};
-		A114840428929380000203D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E6WV5AAPA8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.RadiusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Radius;
-			};
-			name = Debug;
-		};
-		A114840528929380000203D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = E6WV5AAPA8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.RadiusUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Radius;
 			};
 			name = Release;
 		};
@@ -662,15 +590,6 @@
 			buildConfigurations = (
 				A114840128929380000203D0 /* Debug */,
 				A114840228929380000203D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A114840328929380000203D0 /* Build configuration list for PBXNativeTarget "RadiusUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A114840428929380000203D0 /* Debug */,
-				A114840528929380000203D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
